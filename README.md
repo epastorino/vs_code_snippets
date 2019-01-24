@@ -1,2 +1,2 @@
-# vs_code_snippets
-VS Code snippets
+# VisualStudio Code React+Redux Snippets
+Snippets for fast typing of React+Redux components.
