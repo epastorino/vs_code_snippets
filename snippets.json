@@ -219,4 +219,20 @@
         "}",
     ]
   },
+  
+  "muimport": {
+    "prefix": "muimport",
+    "description": "Import a Material UI component",
+    "body": [
+      "import ${1:COMPONENT} from '@material-ui/core/${1}';"
+    ]
+  },
+
+  "muimporticon": {
+    "prefix": "muimporticon",
+    "description": "Import a Material UI icon",
+    "body": [
+      "import ${1:COMPONENT}Icon from '@material-ui/icons/${1}';"
+    ]
+  },
 }
