@@ -83,10 +83,19 @@
     ]
   },
 
-  "constants":{
-    "prefix": "constants",
+  "redux-constant":{
+    "prefix": "redux-constant",
     "body": [
       "export const ${1:SOME_ACTION} = '${2:PROJECT_NAME}/${TM_DIRECTORY/^.+\\\\(.*)$/$1/}/$1';",
+    ]
+  },
+
+  "redux-constants-api":{
+    "prefix": "redux-constants-api",
+    "body": [
+      "export const ${1:SOME_ACTION} = '${2:PROJECT_NAME}/${TM_DIRECTORY/^.+\\\\(.*)$/$1/}/${1}';",
+      "export const ${1}_SUCCESS = '${2:PROJECT_NAME}/${TM_DIRECTORY/^.+\\\\(.*)$/$1/}/${1}_SUCCESS';",
+      "export const ${1}_ERROR = '${2:PROJECT_NAME}/${TM_DIRECTORY/^.+\\\\(.*)$/$1/}/${1}_ERROR';",
     ]
   },
 
@@ -115,6 +124,33 @@
       "    $3$0",
       "  }",
       "}",
+    ]
+  },
+
+  "actioncreator-api": {
+    "prefix": "actioncreator-api",
+    "body": [
+      "export function ${1:actionCreator}(${3:payload}){",
+      "  return {",
+      "    type: ${2:ACTION_TYPE},",
+      "    $3",
+      "  }",
+      "}",
+      "",
+      "export function ${1}Success(${4:payload}){",
+      "  return {",
+      "    type: ${2}_SUCCESS,",
+      "    $4",
+      "  }",
+      "}",
+      "",
+      "export function ${1}Error(${5:error}){",
+      "  return {",
+      "    type: ${2}_ERROR,",
+      "    $5$0",
+      "  }",
+      "}",
+      "",
     ]
   },
 
