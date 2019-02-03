@@ -271,4 +271,28 @@
       "import ${1:COMPONENT}Icon from '@material-ui/icons/${1}';"
     ]
   },
+
+  "import-reducer": {
+    "prefix": "import-reducer",
+    "description": "Import a reducer in base reducer file.",
+    "body": [
+      "import ${1:ComponentName} from './components/${1}/reducer';"
+    ]
+  },
+
+  "import-sagas": {
+    "prefix": "import-sagas",
+    "description": "Import sagas in base sagas file.",
+    "body": [
+      "import watch${1:ComponentName} from './components/${1}/sagas';"
+    ]
+  },
+
+  "import-redux-component": {
+    "prefix": "import-redux-component",
+    "description": "Import a Redux component.",
+    "body": [
+      "import ${1:ComponentName} from '../components/${1}/${1}';"
+    ]
+  }
 }
